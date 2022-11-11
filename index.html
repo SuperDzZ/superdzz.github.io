@@ -10,10 +10,10 @@
 	<link rel="icon" href="android-chrome-512x512.png" type="image/png">
   </head>
 
-  <body>
-    <!-- <audio autoplay="autopaly">
-      <source src="renxi.mp3" type="audio/mp3" />
-    </audio> -->
+  <body onclick="play()">
+    <audio autoplay="autoplay" id="autoplay">
+      <source src="haoxiangni.mp3" type="audio/mp3" />
+    </audio>
     <!-- 星空html -->
     <!-- <div> -->
     <div class="container2">
@@ -27,7 +27,7 @@
       <!--<h3 class="STARDUST1">2022</h3>-->
       <h1 class="STARDUST2">Zhuang Qiao</h1>
       <h3 class="STARDUST3">Chang <strong>❤</strong> Chang</h3>
-      <img class="img" src="trang.jpg" alt="trang" />
+      <img class="img" src="trang.jpg" alt="trang"/>
       <canvas id="pinkboard"></canvas>
     </div>
 
@@ -35,5 +35,20 @@
     <script src="js/main.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/universe.js"></script>
+	<script>
+	setTimeout(function() {
+document.body.onclick();
+  }, 100);
+	function play(){
+	setTimeout(function() {
+document.getElementById('autoplay').play();
+  }, 100);
+  }
+	</script>
+	<script>
+function myFunction() {
+  console.log("hihi");
+}
+</script>
   </body>
 </html>
