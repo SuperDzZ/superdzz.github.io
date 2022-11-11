@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-	<title>❤ SHương ❤</title>
+	<title>❤  ❤</title>
 	<link rel="icon" href="android-chrome-512x512.png" type="image/png">
   </head>
 
@@ -25,9 +25,9 @@
     <div class="title">
       <!-- EDIT HERE -->
       <!--<h3 class="STARDUST1">2022</h3>-->
-      <h1 class="STARDUST2">SHương</h1>
-      <h3 class="STARDUST3">Anh D <strong>❤</strong> SHương</h3>
-      <img class="img" src="huong.jpg" alt="huong"/>
+      <h1 class="STARDUST2" id="name1"><strong>❤</strong></h1>
+      <h3 class="STARDUST3" id="name2"><strong>❤</strong></h3>
+      <img class="img" id="heart_img" src="" alt="heart_img"/>
       <canvas id="pinkboard"></canvas>
     </div>
 
@@ -36,6 +36,20 @@
     <script src="js/particle.js"></script>
     <script src="js/universe.js"></script>
 	<script>
+	const key = window.location.hash.substr(1);
+	if(key==="Chang"){
+	document.title = "❤ Zhuang Qiao ❤";
+	document.getElementById("heart_img").src="trang.jpg";
+	document.getElementById("name1").innerHTML="Zhuang Qiao";
+	document.getElementById("name2").innerHTML="Chang <strong>❤</strong> Chang";
+	} else {
+	
+	document.title = "❤ SHương ❤";
+	document.getElementById("heart_img").src="huong.jpg";
+	document.getElementById("name1").innerHTML="SHương";
+	document.getElementById("name2").innerHTML="Anh D <strong>❤</strong> SHương";
+	}
+	console.log(window.location.hash.substr(1))
 	setTimeout(function() {
 document.body.onclick();
   }, 100);
@@ -46,9 +60,6 @@ document.getElementById('autoplay').play();
   }
 	</script>
 	<script>
-function myFunction() {
-  console.log("hihi");
-}
 </script>
   </body>
 </html>
